@@ -102,8 +102,27 @@ Respond -
 
 ![image](https://github.com/user-attachments/assets/a6b908b0-829d-44d5-bb9b-91b3f55cdb6e)
 
+19) Since we already know we’re dealing with the Sliver C2 payload, we can be more targeted in our exercise by using a signature specifically looking for Sliver. Lucky for us, the UK National Cyber Security Centre published some fantastic intel on Sliver, including YARA signatures and other useful detections. We can now select the Add Yara Rule option and paste the gist of the published rule.
 
+![image](https://github.com/user-attachments/assets/1dd9bd90-5f52-4b8f-898b-05fc8bb41180)
+![image](https://github.com/user-attachments/assets/871f22cc-366d-43fe-903d-068a60e7eba9)
 
+20) We also create a Block and Detect Rule to Detect YARA 
+
+![image](https://github.com/user-attachments/assets/ab460e51-238d-4150-9300-2a4eca928c89)
+
+21) Next we run a manual scan from the EDR Console and we can see that the Yara rule works 
+
+![image](https://github.com/user-attachments/assets/12b129a6-a8fb-471e-8eb9-acf548f87aff)
+
+22) We can further automate it to scan any new file added to Downloads folder. 
+
+![image](https://github.com/user-attachments/assets/9ab57805-4bb6-4fe9-ad45-a1bcf885a0c2)
+![image](https://github.com/user-attachments/assets/7cabb05b-fb7a-467c-b190-97b12f9402e6)
+
+23) We then copy the implant out of the download folder and then back into it and we can see our rule detects it
+
+![image](https://github.com/user-attachments/assets/a4ca1038-a5fd-41f0-b4b6-da27840ce709)
 
 
 
